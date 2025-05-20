@@ -2,7 +2,6 @@
 html { box-sizing: border-box; }
 *, :after, :before { box-sizing: inherit; }
 
-
 body {
 	margin: 0;
 	padding: 30px;
@@ -37,23 +36,25 @@ blockquote {
 
 /*
 	Všimni si, jak jsou zde nadefinované barvy.
-	Potřebný kód barvy si odtamtud můžeš vyzobnout a použít
+	Potřebný kód barvy si odtamtud můžeš zkopírovat a použít
 	ve svém kódu, ale existuje i lepší způsob.
 
   CSS custom properties, někdy také označované jako CSS
 	variables (CSS proměnné), je způsob, jak si	pojmenovat
 	nějakou hodnotu a potom ji v kódu opakovaně používat.
-	Často se používá právě pro barvy a další "nastavení".
+	Často se používá právě pro barvy, rozměry a další "nastavení".
 
-	Když si chci nějakou hodnotu nadefinovat, použiji zápis
-	--mujnazev: hodnota
-	Když chci, abych mohl hodnotu používat všude v CSS,
+	Když si chci nějakou hodnotu nadefinovat, použiji zápis:
+	--mujnazev: hodnota;
+
+	Když chci, abych mohl takovou hodnotu používat kdekoliv v CSS,
 	založím ji uvnitř selektoru :root, takže např.:
 	:root {
 		--mojebarva: #ff8800;
 	}
 
-	Chci-li potom dál v CSS hodnotu použít, stačí použít funkci var a v závorce název proměnné.Např.:
+	Chci-li potom v CSS hodnotu použít, stačí použít funkci var
+	a do závorek uvést název proměnné. Např.:
 	.odstavec {
 		color: var(--mojebarva);
 	}

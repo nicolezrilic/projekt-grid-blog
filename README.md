@@ -1,6 +1,6 @@
 # Grid blog
 
-Dobrovolný kol pro kurz Staň se kóderkou od Czechitas. Když ho odevzdáš, koučové ti k němu napíšou zpětnou vazbu.
+*Cvičný projekt pro kurz Staň se kóderkou od Czechitas.*
 
 - [Cíl úkolu](#Cíl-úkolu)
 - [Grafické zadání](#Grafické-zadání)
