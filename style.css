@@ -18,8 +18,37 @@ h1, h2, h3 {
 
 blockquote {
 	font-family: 'Kaushan Script', cursive;
+	grid-column: 1/-1;
+	text-align: center;
+	font-size: 38px;
+	color: #b2bec3;
 }
 
+blockquote::before {
+	content: "";
+	display:block;
+	grid-column: 1/-1;
+	width: 100px;
+	height: 3px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #c4e538;
+}
+
+blockquote::after {
+	content: "";
+	display:block;
+	grid-column: 1/-1;
+	width: 100px;
+	height: 3px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #c4e538;
+}
 /* --------------------------------------------------- */
 
 /* barvy */
@@ -34,7 +63,91 @@ blockquote {
 	--limetka: #c4e538;
 }
 
+.blog {
+	display:grid;
+	grid-template-columns: [celek-start vlevo-start] 1fr [vlevo-end obsah-start] 4fr [obsah-end vpravo-start] 2fr [vpravo-end celek-end];
+	grid-gap: 20px 40px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.blog > figure {
+	grid-column: 1/-1;
+}
+
+figcaption {
+	color: #b2bec3;
+}
+
+h1 {
+	grid-column: obsah;
+	color: #a3cb38;
+	font-size: 74px;
+}
+
+h2 {
+	grid-column: obsah;
+	color: #a3cb38;
+	font-size: 42px;
+}
+
+.meta {
+	grid-column: obsah;
+	color: #636e72;
+	font-style: italic;
+}
+
+p {
+	grid-column: obsah;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.tip-vlevo {
+	grid-column: 1/2;
+	color: #636e72;
+	background-color: #edf3f5;
+	border-right: 3px solid #f79f1f;
+	text-align: right;
+	padding: 20px;
+}
+
+.tip-vlevo a {
+	color: #ee5a24;
+}
+
+.tip-vpravo {
+	grid-column: 3/4;
+	color: #636e72;
+	background-color: #edf3f5;
+	border-left: 3px solid #f79f1f;
+	text-align: left;
+	padding: 20px;
+}
+
+.tip-vpravo a {
+	color: #ee5a24;
+}
+
+
+
+footer {
+	grid-column: obsah;
+	color: #b2bec3;
+}
+
+footer a {
+	color: #b2bec3;
+}
+
 /*
+.blog > h1,
+.blog > h2,
+.blog > h3,
+.blog > p {
 	Všimni si, jak jsou zde nadefinované barvy.
 	Potřebný kód barvy si odtamtud můžeš zkopírovat a použít
 	ve svém kódu, ale existuje i lepší způsob.
@@ -65,5 +178,6 @@ blockquote {
 	- https://www.w3schools.com/css/css3_variables.asp
 	- https://css-tricks.com/patterns-for-practical-css-custom-properties-use/
 	- https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/
+
 */
 
