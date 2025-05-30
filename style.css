@@ -18,7 +18,7 @@ h1, h2, h3 {
 
 blockquote {
 	font-family: 'Kaushan Script', cursive;
-	grid-column: 1/-1;
+	grid-column: 1 / -1;
 	text-align: center;
 	font-size: 38px;
 	color: #b2bec3;
@@ -26,7 +26,7 @@ blockquote {
 
 blockquote::before {
 	content: "";
-	display:block;
+	display: block;
 	grid-column: 1/-1;
 	width: 100px;
 	height: 3px;
@@ -64,13 +64,13 @@ blockquote::after {
 }
 
 .blog {
-	display:grid;
+	display: grid;
 	grid-template-columns: [celek-start vlevo-start] 1fr [vlevo-end obsah-start] 4fr [obsah-end vpravo-start] 2fr [vpravo-end celek-end];
 	grid-gap: 20px 40px;
 }
 
 img {
-	max-width: 100%;
+	width: 100%;
 	height: auto;
 }
 
@@ -79,7 +79,7 @@ img {
 }
 
 figcaption {
-	color: #b2bec3;
+	color: var(--seda);
 }
 
 h1 {
